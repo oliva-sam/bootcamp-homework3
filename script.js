@@ -11,9 +11,10 @@ function writePassword() {
 function generatePassword() {
 // Pop-Up for Character Length
 var characterLength = 0
-while(characterLength < 8 || characterLength > 128){
+while((characterLength < 8 || characterLength > 128) || Number.isInteger(characterLength) === false){
 characterLength = parseInt(prompt("How many characters would you like your password to contain? \n (must be between 8 - 128 characters)"))
 }
+
 var specialCharacters = false
 var numericCharacters = false
 var lowercaseCharacters = false
