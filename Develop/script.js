@@ -5,6 +5,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
  var password = generatePassword();
  var passwordText = document.querySelector("#password");
+ passwordText.value = password;
 }
 
 function generatePassword() {
@@ -55,8 +56,13 @@ if(uppercaseCharacters){
   userCharacters +=uppercaseLetters;
 }
 
-console.log(userCharacters, characterLength)
-  //passwordText.value = password;
+var password = ""
+for(var i = 1; i <= characterLength; i++){
+  var index = Math.floor(Math.random() * userCharacters.length)
+  password = password + userCharacters[index]
+}
+return password
+
 }
 
 // Add event listener to generate button
