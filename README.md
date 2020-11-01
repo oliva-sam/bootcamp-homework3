@@ -3,6 +3,7 @@
 Users are able to create a random password based on criteria they select from a series of pop-ups. 
 
 ## Criteria in Random Password
+
 Choice of:
 ```
 1. Character length between 8-128 characters
@@ -11,6 +12,7 @@ Choice of:
 4. Lowercase Characters
 5. Uppercase Characters
 ```
+*users must choose at least one differentiating character
 
 ## Mock-Up
 ![password-generator-screenshot](./Assets/03-javascript-homework-demo.png)
