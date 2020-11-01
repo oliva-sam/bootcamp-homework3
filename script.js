@@ -1,3 +1,11 @@
+// Variables users can choose 
+
+var userCharacters = []
+var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz"
+var numbers = "0123456789"
+var specials = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -8,8 +16,8 @@ function writePassword() {
  passwordText.value = password;
 }
 
-function generatePassword() {
 // Pop-Up for Character Length
+function generatePassword() {
 var characterLength = 0
 while((characterLength < 8 || characterLength > 128) || Number.isInteger(characterLength) === false){
 characterLength = parseInt(prompt("How many characters would you like your password to contain? \n (must be between 8 - 128 characters)"))
@@ -19,6 +27,8 @@ var specialCharacters = false
 var numericCharacters = false
 var lowercaseCharacters = false
 var uppercaseCharacters = false
+
+// If cancels to all, loops again
 while(!specialCharacters && !numericCharacters && !uppercaseCharacters && !lowercaseCharacters){
 
   // Pop-Up for Special Characters
@@ -35,11 +45,7 @@ while(!specialCharacters && !numericCharacters && !uppercaseCharacters && !lower
   
 }
 
-var userCharacters = []
-var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz"
-var numbers = "0123456789"
-var specials = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+// User Clicks Ok, adds to userCharacters
 
 if(specialCharacters){
   userCharacters +=specials;
