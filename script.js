@@ -11,64 +11,64 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
- var password = generatePassword();
- var passwordText = document.querySelector("#password");
- passwordText.value = password;
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
 }
 
 // Pop-Up for Character Length
 function generatePassword() {
-var characterLength = 0
-while((characterLength < 8 || characterLength > 128) || Number.isInteger(characterLength) === false){
-characterLength = parseInt(prompt("How many characters would you like your password to contain? \n (must be between 8 - 128 characters)"))
-}
+  var characterLength = 0
+  while ((characterLength < 8 || characterLength > 128) || Number.isInteger(characterLength) === false) {
+    characterLength = parseInt(prompt("How many characters would you like your password to contain? \n (must be between 8 - 128 characters)"))
+  }
 
-var specialCharacters = false
-var numericCharacters = false
-var lowercaseCharacters = false
-var uppercaseCharacters = false
+  var specialCharacters = false
+  var numericCharacters = false
+  var lowercaseCharacters = false
+  var uppercaseCharacters = false
 
-// If cancels to all, loops again
-while(!specialCharacters && !numericCharacters && !uppercaseCharacters && !lowercaseCharacters){
+  // If cancels to all, loops again
+  while (!specialCharacters && !numericCharacters && !uppercaseCharacters && !lowercaseCharacters) {
 
-  // Pop-Up for Special Characters
-  specialCharacters = confirm("Click OK to include Special characters \n  !#$%&'()*+,-./:;<=>?@[]^_`{|}~")
-  
-  // Pop-Up for Numeric Characters
-  numericCharacters = confirm("Click OK to include Numeric characters \n 0123456789")
-  
-  // Pop-Up for Lowercase Characters
-  lowercaseCharacters = confirm("Click OK to include lowercase characters")
-  
-  // Pop-Up for Uppercase Characters
-  uppercaseCharacters = confirm("Click OK to include UPPERCASE characters")
-  
-}
+    // Pop-Up for Special Characters
+    specialCharacters = confirm("Click OK to include Special characters \n  !#$%&'()*+,-./:;<=>?@[]^_`{|}~")
 
-// User Clicks Ok, adds to userCharacters
+    // Pop-Up for Numeric Characters
+    numericCharacters = confirm("Click OK to include Numeric characters \n 0123456789")
 
-if(specialCharacters){
-  userCharacters +=specials;
-}
+    // Pop-Up for Lowercase Characters
+    lowercaseCharacters = confirm("Click OK to include lowercase characters")
 
-if(numericCharacters){
-  userCharacters +=numbers;
-}
+    // Pop-Up for Uppercase Characters
+    uppercaseCharacters = confirm("Click OK to include UPPERCASE characters")
 
-if(lowercaseCharacters){
-  userCharacters +=lowercaseLetters;
-}
+  }
 
-if(uppercaseCharacters){
-  userCharacters +=uppercaseLetters;
-}
+  // User Clicks Ok, adds to userCharacters
 
-var password = ""
-for(var i = 1; i <= characterLength; i++){
-  var index = Math.floor(Math.random() * userCharacters.length)
-  password = password + userCharacters[index]
-}
-return password
+  if (specialCharacters) {
+    userCharacters += specials;
+  }
+
+  if (numericCharacters) {
+    userCharacters += numbers;
+  }
+
+  if (lowercaseCharacters) {
+    userCharacters += lowercaseLetters;
+  }
+
+  if (uppercaseCharacters) {
+    userCharacters += uppercaseLetters;
+  }
+
+  var password = ""
+  for (var i = 1; i <= characterLength; i++) {
+    var index = Math.floor(Math.random() * userCharacters.length)
+    password = password + userCharacters[index]
+  }
+  return password
 
 }
 
