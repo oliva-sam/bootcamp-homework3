@@ -1,31 +1,23 @@
-# 03 Javascript:Password Generator
-UTSA Coding Bootcamp Homework 3 
+#Javascript:Password Generator Application
 
-In the week's assignment, we had to create a user-friendly application for creating a random password based on the criteria they select that will run on any browser.
+Users are able to create a random password based on criteria they select from a series of pop-ups. 
 
-## Skills Used:
+## Criteria in Random Password
+Choice of:
 ```
-- 
-- 
-- 
-- 
-```
-
-## Challenges Overcomed:
-```
-- 
-- 
-- 
-- 
+1. Character length between 8-128 characters
+2. Special Characters
+3. Numeric Characters 
+4. Lowercase Characters
+5. Uppercase Characters
 ```
 
-## Comparison between Actual vs. Mock-UP
+## Mock-Up
+![password-generator-screenshot](assets/03-javascript-homework-demo.png)
 
 
+## Live URL
 
-
-### URL of Depoloyed Application
-
-:point_right:  *live URL will go here*  :point_left:
+[oliva-sam.github.io/bootcamp-homework3/](https://oliva-sam.github.io/bootcamp-homework3/)
 
 
