@@ -13,7 +13,7 @@ Choice of:
 ```
 
 ## Mock-Up
-![password-generator-screenshot](assets/03-javascript-homework-demo.png)
+![password-generator-screenshot](https://utsa.bootcampcontent.com/utsa-bootcamp/utsa-san-fsf-pt-10-2020-u-c/-/raw/master/03-JavaScript/02-Homework/Assets/03-javascript-homework-demo.png)
 
 
 ## Live URL
