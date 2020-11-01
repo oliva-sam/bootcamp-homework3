@@ -1,4 +1,4 @@
-#Javascript:Password Generator Application
+# Javascript:Password Generator Application
 
 Users are able to create a random password based on criteria they select from a series of pop-ups. 
 
